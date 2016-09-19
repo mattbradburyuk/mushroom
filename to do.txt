@@ -1,0 +1,29 @@
+to do
+
+- make the deployed track more than one deployment of the contract
+- make the compiler compile and link multi class and library contracts
+
+- add cl tool
+
+- make unlock account work for all account not just mine, ie sort out password
+
+- modify to produce compiled output that a can be deployed by a contract
+
+- need to change prescription javascript to use new format complied files (json structure changed to support multiple .sols)
+
+- get multi deployment working
+
+- add usage if cli errors
+
+- improve deployed_instances mechanism
+
+- do read me
+
+- add a wrapper for contract
+
+
+
+notes:
+
+truffle probably uses a contract on the chain to track deployments because then it has a record of what's been deployed on that specific chain, if it stores the info locally then it might be deploying to a different chain
+

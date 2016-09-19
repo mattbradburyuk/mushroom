@@ -1,0 +1,10 @@
+#! /bin/bash
+
+
+echo 'hello world'
+
+echo $1
+mkdir $1
+cd $1
+
+cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/. .
