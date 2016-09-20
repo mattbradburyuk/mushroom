@@ -1,10 +1,26 @@
 #! /bin/bash
 
 
-echo 'hello world'
+echo 'setting up clean mushroom folder...'
 
 echo $1
 mkdir $1
 cd $1
 
-cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/. .
+mkdir .mushroom
+cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/.mushroom/ ./.mushroom
+cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/.mushroom_config.js .
+cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/mushroom.js .
+
+mkdir config
+
+cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/config/ ./config
+
+mkdir sources
+
+cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/sources/ ./sources
+
+mkdir output
+mkdir output/compiled
+mkdir output/deployed
+

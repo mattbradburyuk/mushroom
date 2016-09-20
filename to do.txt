@@ -21,9 +21,16 @@ to do
 
 - add a wrapper for contract
 
+- make deployer not re deploy if already deployed on chain
 
+- make set up script callable from anywhere
 
 notes:
 
 truffle probably uses a contract on the chain to track deployments because then it has a record of what's been deployed on that specific chain, if it stores the info locally then it might be deploying to a different chain
 
+note on directories
+
+- Contract builder: has the messing about stuff
+- Mushromm has the code for copying into a new clean mushroom with the script
+- Test_mushroom is a test of the code copying over

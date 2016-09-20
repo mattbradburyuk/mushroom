@@ -13,6 +13,7 @@ contract base_contract{
     }
 }
 
+
 contract child_contract is base_contract {
 
     uint child_value;

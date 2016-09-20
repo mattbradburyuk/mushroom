@@ -1,6 +1,6 @@
 pragma solidity ^0.4.1;
 
-import "Play_2_child.sol";
+import "example_child.sol";
 
 contract grandchild_contract is child_contract {
 
