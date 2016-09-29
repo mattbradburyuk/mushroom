@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-#plan
-#
-#1) check script started in mushroom directory - would this work if
-#2) case on arg 1 -r, -a, blank/something else
-#3) check arg 2 is a directory
-#4) check arg 2 is not current directory
+# Script to install a new Mushroom project
+
+echo ""
+echo "Checking source and target Directories"
 
 
-# check that script is run from the folder called mushroom
+# Check that script is run from the folder called mushroom
 
 DIR_NAME=${PWD##*/}
 if [ $DIR_NAME != "mushroom" ];
@@ -40,7 +38,7 @@ if [ "$#" -gt 2 ];
 fi
 
 
-# check that referencing flag is present
+# Check that referencing flag is present
 
 case $1 in
     -r) echo " ---> Using relative referencing from mushroom folder to new project folder"
@@ -51,8 +49,6 @@ case $1 in
         exit;;
 esac
 
-
-
 case $2 in
     '') echo ' ---> Path to new project directory (arg 2) is blank, cannot use mushroom directory, it would get messy'
         exit;;
@@ -61,38 +57,30 @@ case $2 in
        exit;;
 esac
 
-
-
 echo ' ---> Target directory: ' $TARGET_DIR
 
 
-
+# Copy template files to new folder
 
 echo ''
-echo 'setting up clean mushroom folder...'
+echo 'Copying Mushroom template to new project folder...'
 
 mkdir $TARGET_DIR
+cp -R $SOURCE_DIR/ $TARGET_DIR
+echo " ---> Done"
 
-cp -R $SOURCE_DIR $TARGET_DIR
+# Installing node dependencies with npm
 
-#cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/.mushroom/ ./.mushroom
-#cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/.mushroom_config.js .
-#cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/mushroom.js .
-#cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/package.json .
-#cp /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/.gitignore .
-#
-#
-#mkdir config
-#
-#cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/config/ ./config
-#
-#mkdir sources
-#
-#cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/sources/ ./sources
-#
-#mkdir output
-#
-#cp -R /Users/matthewbradbury/Dropbox/development/Dapps/mushroom/output/ ./output
-#
-#
-#npm install
+echo ""
+echo "Installing node dependencies"
+echo ""
+cd $TARGET_DIR
+npm install
+
+
+# Finished message
+
+echo ''
+echo "All done... To see commands type 'node mushroom.js' in the new project root"
+echo ""
+echo "Feedback/Issues to: https://github.com/mattbradburyuk/mushroom"
