@@ -1,18 +1,13 @@
-/*
- unmodified from deploy_contract_prom
- 
- add contracts_to_deploy.js config file: contract names + compile files to use 
- 
- + consider moving into main config files
- 
- 
- */
+// deploys compiled contracts
+
 
 // ********** imports ****************
 
 var Web3 = require('web3');
 var jayson = require('jayson');
 var jsonfile = require("jsonfile");
+
+
 
 // ********* get the config files  ************
 
@@ -25,6 +20,7 @@ var cc_path = root + mushroom_config.structure.contract_config_location + mushro
 var contract_config = require(cc_path);
 
 
+
 // *********** set up web3 and rpc ****************
 
 const web3  = new Web3();
@@ -35,6 +31,8 @@ var rpc_client = jayson.client.http(url);
 // check connection objects
 // console.log(web3._requestManager.provider.host);
 // console.log(rpc_client.options.host)
+
+
 
 // ********** execute Promise chain ***************
 
@@ -50,35 +48,16 @@ read_in_json()
 
 
 
-
-return;
-
-// ********** old Promise chain ***************
-
-
-
-// var file = options.file;
-
-read_in_json()
-    .then(unlock_acc)
-    .then(toggle_mining_on)
-    // .then(pass_though)
-    .then(deploy_contract)
-    .then(pass_though)
-    .then(toggle_mining_off)
-    .then(write_json_to_file)
-    .then(end_success,end_error)
-
-// ********** define promises ******************
+// // ********** define promises ******************
 
 function read_in_json(){
-    console.log("read_in_json called");
+    console.log("Reading in compiled contracts");
     return new Promise(function(resolve,reject){
 
         var file = contract_config.compiler_output_file_to_deploy;
         var file_path = root + mushroom_config.structure.compiler_output_directory + file
         
-        console.log(" ---> Reading in json from compiled file:", file);
+        console.log(" ---> Reading in json from compiled compiled_file:", file);
         
         jsonfile.readFile(file_path, callback);
 
@@ -94,7 +73,7 @@ function read_in_json(){
 }
 
 function unlock_acc(pass_through){
-    console.log("\nunlock_acc called");
+    console.log("\nUnlocking coinbase account");
     return new Promise(function (resolve,reject){
 
         web3.personal.unlockAccount(web3.eth.accounts[0],'mattspass', callback);  // unlock accounts
@@ -103,7 +82,7 @@ function unlock_acc(pass_through){
             if (e) {
                 reject("unlock_acc error");
             } else {
-                console.log(" --->account unlocked");
+                console.log(" ---> account unlocked");
                 resolve(pass_through);
             }
         }
@@ -113,7 +92,7 @@ function unlock_acc(pass_through){
 
 function deploy_contracts(json){
 
-    console.log("\ndeploy_contracts called");
+    console.log("\nDeploying contracts");
 
     return new Promise(function(resolve,reject){
 
@@ -152,7 +131,7 @@ function deploy_contracts(json){
         Promise.all(proms).then(collect_json_returns).then(resolve,reject);
 
 
-        // collects return values from Promise.all and creates json to be written to the deployed file
+        // collects return values from Promise.all and creates json to be written to the deployed compiled_file
 
         function collect_json_returns(return_arr){
 
@@ -195,8 +174,9 @@ function deploy_contract(contract_json){
             } else {
 
                 if (typeof contract.address != 'undefined') {
-                    console.log(' ---> Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
-
+                    console.log(' ---> Contract mined');
+                    console.log('      ---> address:' + contract.address)
+                    console.log('      ---> transactionHash: ' + contract.transactionHash)
                     var json = {"address": contract.address, "tx_hash": contract.transactionHash};
                     resolve(json);
                 }
@@ -206,12 +186,12 @@ function deploy_contract(contract_json){
 }
 
 function write_json_to_file(json_to_file){
-    console.log("\nwrite_json_to_file called");
+    console.log("\nWriting deployed details to file: ");
     return new Promise(function (resolve,reject){
 
         var dep_path = root + mushroom_config.structure.deployer_output_directory + contract_config.deployment_record;
 
-        console.log("dep_path: ", dep_path);
+        console.log(" --->", contract_config.deployment_record);
 
         jsonfile.writeFile(dep_path, json_to_file, callback);
 
@@ -219,7 +199,7 @@ function write_json_to_file(json_to_file){
             if (e) {
                 reject(e);
             } else {
-                console.log(" ---> json written to file\n");
+                console.log(" ---> written to file\n");
                 resolve("success !!!");
             }
         }
@@ -230,11 +210,11 @@ function write_json_to_file(json_to_file){
 // ********* toggling mining **********
 
 function toggle_mining_on(pass_through){
-    console.log("\ntoggle_mining_on called");
+    console.log("\nSwitch on mining");
     return new Promise(function (resolve, reject){
 
         if (web3.eth.mining) {
-            console.log(" ---> Already mining\n")
+            console.log(" ---> Already mining")
             switch_on_mining = false;
             resolve(pass_through);
         }else{
@@ -246,7 +226,7 @@ function toggle_mining_on(pass_through){
             if (e) {
                 reject("toggle_mining_on error");
             } else {
-                console.log(" ---> mining switched on\n")
+                console.log(" ---> mining switched on")
                 resolve(pass_through);
             }
         }
@@ -254,14 +234,14 @@ function toggle_mining_on(pass_through){
 }
 
 function toggle_mining_off(pass_through){
-    console.log("\ntoggle_mining_off called");
+    console.log("\nSwitching mining off");
     return new Promise(function (resolve, reject){
 
         if(switch_on_mining){
 
             rpc_client.request('miner_stop', [], callback);
         }else{
-            console.log(" --> leave mining as was\n");
+            console.log(" --> leave mining as was");
             resolve(pass_through);
         }
 
@@ -269,7 +249,7 @@ function toggle_mining_off(pass_through){
             if (e) {
                 reject("toggle_mining_on error");
             } else {
-                console.log(" ---> Switching off mining\n")
+                console.log(" ---> Switching off mining")
                 resolve(pass_through);
             }
         }
@@ -290,11 +270,11 @@ function pass_though(val) {
 
 function end_success(result) {
     console.log("\nEnd result: ---> ",result); // "Stuff worked!"
-    console.log("\n *********  end of script **********");
+    // console.log("\n *********  end of script **********");
 }
 function end_error(err) {
     console.log("\nEnd error: ---> ",err); // Error: "It broke"
-    console.log("\n *********  end of script **********");
+    // console.log("\n *********  end of script **********");
 }
 
 
