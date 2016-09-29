@@ -1,0 +1,11 @@
+{
+  "name": "mushroom",
+  "version": "0.0.2",
+  "dependencies": {
+    "command-line-args": "^2.1.6",
+    "jayson": "^2.0.0",
+    "web3": "^0.15.2",
+    "solc": "^0.4.0",
+    "jsonfile": "^2.3.1"
+  }
+}
