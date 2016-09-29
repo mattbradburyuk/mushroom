@@ -37,6 +37,7 @@ The positive side is that I have tried to make it a simple as possible, well com
 Here's the steps for installing Mushroom
  
  1) Change to the directory where you want to install Mushroom 
+ 
  2) Clone this repo:
  ```
  $ git clone https://github.com/mattbradburyuk/mushroom.git
@@ -55,6 +56,7 @@ Here's the steps for installing Mushroom
 To start a new Mushroom project: 
  
  1) Make sure you are in the mushroom directory
+ 
  2) Run the initialisation script
 ```
 mushroom $ sh mushroom_init.sh -r ../new_project_name
