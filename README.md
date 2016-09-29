@@ -53,20 +53,20 @@ Here's the steps for installing Mushroom
  
 To start a new Mushroom project: 
  
-1) Make sure you are in the mushroom directory
-2) Run the initialisation script
+ 1) Make sure you are in the mushroom directory
+ 2) Run the initialisation script
 ```
 mushroom $ sh mushroom_init.sh -r ../<new_project_name>
 ```
 Explanation:
-* sh --> run a bash script
-* mushroom_init.sh --> a script which copies over the mushroom template
-* -r --> specifies that the new_project path is relative to the mushroom directory
+ * 'sh' --> run a bash script
+ * 'mushroom_init.sh' --> a script which copies over the mushroom template
+ * '-r' --> specifies that the new_project path is relative to the mushroom directory
                     (can use -a instead to specify an absolute path)
-* ../ --> relative path to the new directory (moving back a directory so the new project isn't mixed up with the mushroom directory)
-* <new_project_name> --> the path and name to the new_project (this will be created by the script) 
+ * '../' --> relative path to the new directory (moving back a directory so the new project isn't mixed up with the mushroom directory)
+ * '<new_project_name>' --> the path and name to the new_project (this will be created by the script) 
  
-3) Change to the specified project directory,
+ 3) Change to the specified project directory,
  ```
  mushroom $ cd ../<new_project_name>
  ```
@@ -99,7 +99,7 @@ You should see the standard project structure inside the directory
  
 You have a few options for setting up an ethereum node for testing/ development
  
-1) Use testRPC, see: https://github.com/ethereumjs/testrpc
-2) Use the morden test net: https://github.com/ethereum/wiki/wiki/Morden
-3) Install a local ethereum node and set it up as a private chain: https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/private-chain.html
-4) Use my easy set up/ tear down dockerised geths (which is what I use and is really cool for setting up Ethereum Networks from scratch in a few seconds): https://github.com/mattbradburyuk/ethereumplay
+ 1) Use testRPC, see: https://github.com/ethereumjs/testrpc
+ 2) Use the morden test net: https://github.com/ethereum/wiki/wiki/Morden
+ 3) Install a local ethereum node and set it up as a private chain: https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/private-chain.html
+ 4) Use my easy set up/ tear down dockerised geths (which is what I use and is really cool for setting up Ethereum Networks from scratch in a few seconds): https://github.com/mattbradburyuk/ethereumplay
