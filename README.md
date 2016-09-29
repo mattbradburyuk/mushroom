@@ -35,19 +35,19 @@ Prerequisites:
  
 Here's the steps for installing Mushroom
  
-1) Change to the directory where you want to install Mushroom
-2) Clone this repo:
+ 1) Change to the directory where you want to install Mushroom 
+ 2) Clone this repo:
  ```
  $ git clone https://github.com/mattbradburyuk/mushroom.git
  
  ```
-3) This should give you a folder called mushroom which you should change into
+ 3) This should give you a folder called mushroom which you should change into
  ```
  $ cd mushroom
  ```
-4) Take a look in the mushroom folder, there is: 
-* A directory called 'mushroom_template_files': this is basically a template for each new Mushroom project. Don't change the files in here unless you wat the changes to be replicated across all future projects 
-* A script called mushroom_init.sh, this is the script you will use to start a new mushroom project
+ 4) Take a look in the mushroom folder, there is: 
+ * A directory called 'mushroom_template_files': this is basically a template for each new Mushroom project. Don't change the files in here unless you wat the changes to be replicated across all future projects 
+ * A script called mushroom_init.sh, this is the script you will use to start a new mushroom project
  
 ##Starting a new Mushroom project 
  
