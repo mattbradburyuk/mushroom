@@ -188,6 +188,21 @@ This file holds the configuration for mushroom
  ```
  
  
+##Example .sol files
+ 
+The Mushroom project template has two example .sol files: 
+ * example_child.sol
+ * example_grandchild.sol
+ 
+You can run the compile, deploy and helpers commands (see below) on these files to see them in action straight away
+ 
+Also, to test out the heplers you can run: 
+ ```
+ new_project $ node ./.mushroom/helper_generator/tester.js
+ 
+ ```
+This will run a quick interaction test using the contract abstraction
+ 
  
 ##Mushroom commands
  
@@ -200,6 +215,11 @@ All commands should be run from the project root and take the form:
  * 'node' -> Mushroom is written in node, you run it as a .js file through the node interpreter
  * 'mushroom.js' -> the .js file which interprets the commands and fires the appropriate functionality
  * 'command' -> the command you want to run
+ 
+ 
+ 
+ 
+ 
  
 The commands are as follows: 
  
