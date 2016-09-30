@@ -49,6 +49,7 @@ var set_args_tx = function (val) {
 
 // ************** test promise chain ***************
 
+var switch_on_mining;
 
 toggle_mining_on()
     .then(unlock_acc)
