@@ -394,7 +394,8 @@ The contract abstraction:
  * For non-constant functions a 'transaction' is used which requires gas to power the state change
  
 
- 5) Waits until the transaction is mined.
+
+5) Waits until the transaction is mined.
  
 For non-constant functions the call to the function will only complete once the transaction has been mined
  
