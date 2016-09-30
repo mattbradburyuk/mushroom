@@ -264,15 +264,15 @@ The commands are as follows:
   ```
  2) Looks up which contracts to deploy from the file (4)
  
- 3) Switches on mining if not on allready
+ 3) Switches on mining if not on already and unlocks the coinbase account 
  
- and unlocks the coinbase account (****** currently this is set to my dummy password 'mattspass', this needs fixing so works with a non dummy password *******)
+ (****** currently this is set to my dummy password 'mattspass', this needs fixing so works with a non dummy password - bug raised *******)
  
  4) Deploys the contracts
  
  5) Switches mining off if it wasn't on previously
  
- 6) Writes out the details of the deployed contracts to a json file (5)  
+ 6) Writes out the details of the deployed contracts to a json file specified in (5)  
  ```
  {"contracts":
   [{"name":"Base_contract",
@@ -304,16 +304,16 @@ The commands are as follows:
  * When sending a transaction in to Ethereum the call back only tells you when the transaction is received, often you want to know when its mined before you take the next action
  * You need to know information (abi, address etc...) about the deployed contract to interact with it, this info will change with different deployments
  
- Helpers address these problems by providing a (auto generated) contract abstraction
+Helpers address these problems by providing a (auto generated) contract abstraction
   
-  To include helper in your project:
+To include helper in your project:
   
   ```
   var helper_file = '/your/path/to/file/Your_contract_helper.js'
   var Your_contract = require(helper_file)
   ```
   
-  The contract abstraction: 
+The contract abstraction: 
   
  1) Provides access to deploy contract information
  
@@ -325,7 +325,7 @@ The commands are as follows:
  your_contract.contract -> returns the web3 object which can be used to interact with the contract
  
  ```
-  2) Wraps interactions to the contract in a Promise.
+ 2) Wraps interactions to the contract in a Promise.
   
   These promises can be chained together to form what behaves like a chain of synchronous functions, for example:
  ```
