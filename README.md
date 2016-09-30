@@ -158,7 +158,7 @@ This is the main .js file which the you run to invoke a given function (see Mush
  
 **.mushroom_config.js**
  
-This file holds the configuration information for mushroom
+This file holds the configuration for mushroom
  
  ```
  module.exports = {
@@ -201,9 +201,9 @@ All commands should be run from the project root and take the form:
  * 'mushroom.js' -> the .js file which interprets the commands and fires the appropriate functionality
  * 'command' -> the command you want to run
  
- The commands are as follows: 
+The commands are as follows: 
  
- **compile**
+**compile**
  
  Compiles and links contracts contained with in one or many .sol files
  
@@ -241,7 +241,7 @@ All commands should be run from the project root and take the form:
   * formal verification output (not sure about this bit)
  
  
- **deploy**
+**deploy**
  
  Deploys compiled contracts to Ethereum
  
@@ -290,7 +290,7 @@ All commands should be run from the project root and take the form:
  
  Note, this file gets completely overwritten with each deploy
  
- **helpers**
+**helpers**
  
  Generates helper files which provide a contract abstraction for easy interaction with each deployed contract
  
