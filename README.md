@@ -426,7 +426,9 @@ The Mushroom project template has two example .sol files:
 * example_child.sol
 * example_grandchild.sol
 
-You can run the compile, deploy and helpers commands (see below) on these files to see them in action straight away
+(These demonstrate Smart Contract inheritance both within one file and across two files)
+
+You can run the compile, deploy and helpers commands (see above) on these files to see them in action straight away
 
 Also, to test out the heplers you can run: 
 ```
