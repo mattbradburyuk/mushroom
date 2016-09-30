@@ -90,10 +90,11 @@ mushroom $ sh mushroom_init.sh -r ../new_project_name
  * '../' --> relative path to the new directory (In this case moving back a directory so the new project isn't mixed up with the mushroom directory)
  * 'new_project_name' --> name of the new_project directory (this will be created by the script) 
  
- The script will copy over a clean version of a mushroom project from the template in '/mushroom/mushroom_template_files'. Then run npm to install the dependencies. 
+The script will copy over a clean version of a mushroom project from the template in '/mushroom/mushroom_template_files'. Then run npm to install the dependencies. 
 
  
  3) Change to the specified project directory, eg
+ 
  ```
  mushroom $ cd ../new_project_name
  ``` 

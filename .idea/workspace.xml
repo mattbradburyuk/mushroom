@@ -48,15 +48,15 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="502">
-                <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+              <first_editor relative-caret-position="337">
+                <caret line="83" column="3" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
                 <folding>
-                  <marker date="1475232756000" expanded="true" signature="10190:10602" ph="{...}" />
-                  <marker date="1475232756000" expanded="true" signature="10206:10601" ph="[...]" />
-                  <marker date="1475232756000" expanded="true" signature="10207:10400" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-                  <marker date="1475232756000" expanded="true" signature="10246:10395" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-                  <marker date="1475232756000" expanded="true" signature="10405:10598" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-                  <marker date="1475232756000" expanded="true" signature="10444:10593" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+                  <marker date="1475232978000" expanded="true" signature="10195:10607" ph="{...}" />
+                  <marker date="1475232978000" expanded="true" signature="10211:10606" ph="[...]" />
+                  <marker date="1475232978000" expanded="true" signature="10212:10405" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+                  <marker date="1475232978000" expanded="true" signature="10251:10400" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+                  <marker date="1475232978000" expanded="true" signature="10410:10603" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+                  <marker date="1475232978000" expanded="true" signature="10449:10598" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -375,16 +375,16 @@
       <workItem from="1474321402504" duration="3149000" />
       <workItem from="1475134565000" duration="4149000" />
       <workItem from="1475143203176" duration="9625000" />
-      <workItem from="1475157958782" duration="16869000" />
+      <workItem from="1475157958782" duration="17062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33792000" />
+    <option name="totallyTimeSpent" value="33985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-382" y="-1391" width="2437" height="1321" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120033115" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -392,7 +392,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46541905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46541905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -654,15 +654,15 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="502">
-            <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+          <first_editor relative-caret-position="337">
+            <caret line="83" column="3" selection-start-line="83" selection-start-column="3" selection-end-line="83" selection-end-column="3" />
             <folding>
-              <marker date="1475232756000" expanded="true" signature="10190:10602" ph="{...}" />
-              <marker date="1475232756000" expanded="true" signature="10206:10601" ph="[...]" />
-              <marker date="1475232756000" expanded="true" signature="10207:10400" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-              <marker date="1475232756000" expanded="true" signature="10246:10395" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-              <marker date="1475232756000" expanded="true" signature="10405:10598" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-              <marker date="1475232756000" expanded="true" signature="10444:10593" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+              <marker date="1475232978000" expanded="true" signature="10195:10607" ph="{...}" />
+              <marker date="1475232978000" expanded="true" signature="10211:10606" ph="[...]" />
+              <marker date="1475232978000" expanded="true" signature="10212:10405" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+              <marker date="1475232978000" expanded="true" signature="10251:10400" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+              <marker date="1475232978000" expanded="true" signature="10410:10603" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+              <marker date="1475232978000" expanded="true" signature="10449:10598" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
