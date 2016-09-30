@@ -78,10 +78,11 @@ To start a new Mushroom project:
  1) Make sure you are in the mushroom directory
  
  2) Run the initialisation script
+ 
 ```
 mushroom $ sh mushroom_init.sh -r ../new_project_name
 ```
-Explanation:
+ Explanation:
  * 'sh' --> run a bash script
  * 'mushroom_init.sh' --> a script which copies over the mushroom template
  * '-r' --> specifies that the new_project path is relative to the mushroom directory
