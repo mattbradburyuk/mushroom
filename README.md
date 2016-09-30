@@ -90,12 +90,13 @@ Explanation:
  * 'new_project_name' --> name of the new_project directory (this will be created by the script) 
  
  The script will copy over a clean version of a mushroom project from the template in '/mushroom/mushroom_template_files'. Then run npm to install the dependencies. 
+
  
  3) Change to the specified project directory, eg
  ```
  mushroom $ cd ../new_project_name
  ``` 
-You should see the standard project structure inside the directory (see next section)
+ You should see the standard project structure inside the directory (see next section)
 
  4) Open .mushroom_config.js (its currently a hidden file so you have to use 'ls -a' to see it, probably need to change that)
  
