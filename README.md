@@ -318,11 +318,11 @@ The contract abstraction:
  1) Provides access to deploy contract information
  
  ```
- Your_contract.abi => returns the contract abi
+ Your_contract.abi      -----> returns the contract abi
  
- Your_contract.address -> returns the contract deployed address
+ Your_contract.address  -----> returns the contract deployed address
  
- your_contract.contract -> returns the web3 object which can be used to interact with the contract
+ your_contract.contract -----> returns the web3 object which can be used to interact with the contract
  
  ```
  2) Wraps interactions to the contract in a Promise.
@@ -387,17 +387,16 @@ The contract abstraction:
  
  Note, because of inheritance, the contract abstraction of Child_contract will also have the functions for Base_contract
  
- 4) Distinguishes between constant and non constant functions. 
+ 4) Distinguishes between constant and non-constant functions. 
  
  * Mushroom will detect if the Solidity method is constant or not, 
  * For constant functions (ie ones that don't change the Ethereum state) a 'call' will be used to interact with Ethereum, 
  * For non-constant functions a 'transaction' is used which requires gas to power the state change
  
- 
- 
+
  5) Waits until the transaction is mined.
  
- For non-constant functions the call to the function will only complete once the transaction has been mined
+For non-constant functions the call to the function will only complete once the transaction has been mined
  
  6) Varies the number of arguments expected
 
