@@ -435,6 +435,6 @@ Also, to test out the heplers you can run:
 new_project $ node ./.mushroom/helper_generator/tester.js
 
 ```
-This will run a quick interaction test using the contract abstraction
+This will run a quick interaction test using the contract abstraction, which reads in a value, increments it by 1 then reads it again.
   
  
