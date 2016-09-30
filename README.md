@@ -1,11 +1,11 @@
 # Mushroom
-My crack at making something a bit like Truffle
+My crack at making something a bit like Truffle...
 
 Mushroom is a tool kit for working with Ethereum Solidity Smart contracts, it includes:
 
-* Contract compilation supporting multi-contract, multi file compilation
-* Contract deployer which will push the compiled contracts onto your blockchain
-* Contract helper generation, which generate a node.js contract specific abstraction for easy interaction with your contract
+ * Contract compilation, supporting multi-contract, multi file compilation
+ * Contract deployer, which will push the compiled contracts onto an Ethereum blockchain
+ * Contract helper generator, which generate a node.js contract specific abstraction for easy interaction with your contract
  
  Note: I wrote this on a mac, I haven't tested it on any other platforms yet
  
@@ -22,13 +22,15 @@ So I decided I would write my own version of truffle primarily as an excerise to
  * Deploying and tracking contracts on ethereum
  * IDEA SDKs - Intellij and WebStorm
  
-I intent Mushroom to be useful for working with Smart Contracts but also useful where the user wants to be able to dig in and understand the processes under the hood. So I've tried to make mushroom as simple and self explanatory as possible:
+I intent Mushroom to be useful for working with Smart Contracts but also useful where the user wants to be able to dig in and understand the processes under the hood. 
+
+To this end, I've tried to make mushroom as simple and self explanatory as possible:
  
- * Modular structure, the directory structure pretty much explains what the each part does.
+ * Modular structure, the directory structure pretty much explains what the each part does
  * Well commented, I have tried to explain what each bit of code is doing
- * Descriptive function and variable names 
+ * Descriptive function and variable names
   
-Any feedback will be greatfully received, you can raise an issue in the Github repo: https://github.com/mattbradburyuk/mushroom/issues
+Any feedback will be gratefully received, you can raise an issue on the Github repo: https://github.com/mattbradburyuk/mushroom/issues
 
  
 #Using Mushroom
@@ -41,7 +43,7 @@ Any feedback will be greatfully received, you can raise an issue in the Github r
  
 ##Setting up an Ethereum node
  
-You have a few options for setting up an ethereum node for testing/ development
+You have a few options for setting up an ethereum node for testing/ development:
  
  1) Use testRPC, see: https://github.com/ethereumjs/testrpc
  
@@ -49,7 +51,7 @@ You have a few options for setting up an ethereum node for testing/ development
  
  3) Install a local ethereum node and set it up as a private chain: https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/private-chain.html
  
- 4) Use my easy set up/ tear down dockerised geths (which is what I use and is really cool for setting up Ethereum Networks from scratch in a few seconds): https://github.com/mattbradburyuk/ethereumplay 
+ 4) Use 'ethereumplay' my easy set up/ tear down dockerised geths (which is what I use and is really cool for setting up Ethereum Networks from scratch in a few seconds): https://github.com/mattbradburyuk/ethereumplay 
  
 ##Installing Mushroom
 
@@ -66,8 +68,8 @@ Here's the steps for installing Mushroom
  $ cd mushroom
  ```
  4) Take a look in the mushroom folder, there is: 
- * A directory called 'mushroom_template_files': this is basically a template for each new Mushroom project. Don't change the files in here unless you wat the changes to be replicated across all future projects 
- * A script called 'mushroom_init.sh', this is the script you will use to start a new mushroom project
+ * A directory called 'mushroom_template_files': This is basically a template for each new Mushroom project. Don't change the files in here unless you wat the changes to be replicated across all future projects 
+ * A script called 'mushroom_init.sh': This is the script you will use to start a new mushroom project
  
 ##Starting a new Mushroom project 
  
@@ -83,21 +85,22 @@ Explanation:
  * 'sh' --> run a bash script
  * 'mushroom_init.sh' --> a script which copies over the mushroom template
  * '-r' --> specifies that the new_project path is relative to the mushroom directory
-                    (can use -a instead to specify an absolute path)
- * '../' --> relative path to the new directory (moving back a directory so the new project isn't mixed up with the mushroom directory)
- * 'new_project_name' --> the path and name to the new_project (this will be created by the script) 
+                    (can use '-a' instead to specify an absolute path)
+ * '../' --> relative path to the new directory (In this case moving back a directory so the new project isn't mixed up with the mushroom directory)
+ * 'new_project_name' --> name of the new_project directory (this will be created by the script) 
  
  The script will copy over a clean version of a mushroom project from the template in '/mushroom/mushroom_template_files'. Then run npm to install the dependencies. 
  
- 3) Change to the specified project directory,
+ 3) Change to the specified project directory, eg
  ```
- mushroom $ cd ../<new_project_name>
+ mushroom $ cd ../new_project_name
  ``` 
-You should see the standard project structure inside the directory
+You should see the standard project structure inside the directory (see next section)
 
  4) Open .mushroom_config.js (its currently a hidden file so you have to use 'ls -a' to see it, probably need to change that)
  
-  ```json
+ 
+  ```
   module.exports = {
       rpc: {                           <----- this points to the geth client you want to interact with
           host: "192.168.99.100",
@@ -106,30 +109,29 @@ You should see the standard project structure inside the directory
       ...
 }
  ```
- 5) Change host and port so it points to the geth client you want to interact with and save the file
+ 5) Change host and port so it points to the Ethereum client (eg Geth) you want to interact with and save the file
  
  
 ##Mushroom project directory structure
  A Mushroom project has the following directories and files
  
- ###sources
+ **sources**
  
- This is where you put your solidity .sol files which
+ This is where you put your solidity .sol files which you want to compile
  
- 
- ###output
+ **output**
  
  All generated output from mushroom is written to one of the folders in the 'output' directory:
  
- * compiled: holds the compiled output from the solc compiler
- * deployed: holds a file containing information about deployed contracts (address and tx_receipt for deployed contracts)
- * helpers: holds the files which provide contract abstractions for each deployed contract
+ * /compiled: holds the compiled output from the solc compiler
+ * /deployed: holds a file containing information about deployed contracts (address and tx_receipt for deployment tranasction)
+ * /helpers: holds the files which provide contract abstractions for each deployed contract
  
- ###config
+ **config**
  
- contains contract_config.js, this is a json file which allows you to specify what should be compiled, deployed and what the output files should be called.
+ Contains contract_config.js, this is a json file which allows the you to specify what should be compiled, deployed and what the output files should be called.
  
- ```json
+ ```
  module.exports = {
      
      files_to_compile: ["example_child.sol","example_grandchild.sol" ],
@@ -142,20 +144,20 @@ You should see the standard project structure inside the directory
  ```
 
  
- ###.mushroom
+ **.mushroom**
  
  This is the functionality of Mushroom, take a look if you want to understand whats under the hood.
  
  
- ###mushroom.js
+ **mushroom.js**
  
- This is the main .js file which the user runs to invoke a given function (see Mushroom commands below)
+ This is the main .js file which the you run to invoke a given function (see Mushroom commands below)
  
- ###.mushroom_config.js
+ **.mushroom_config.js**
  
  This file holds the configuration information for mushroom
  
- ```json
+ ```
  module.exports = {
      rpc: {                           <----- this points to the geth client you want to interact with
          host: "192.168.99.100",
@@ -178,30 +180,27 @@ You should see the standard project structure inside the directory
          
          contract_config: "contract_config.js",
          contract_config_location: "/config/"
-         
- 
      }
- 
  };
  ```
  
  
  
- ##Mushroom commands
+ **Mushroom commands**
  
  All commands should be run from the project root and take the form:
  ```
- project_root $ node mushroom.js <command>
+ project_root $ node mushroom.js command
  ```
  
  Explanation: 
- * node -> Mushroom is written in node, you run it as a .js file through the node interpreter
- * mushroom.js -> the .js file which interprets the commands and fires the appropriate functionality
- * <command> -> the command you want to run
+ * 'node' -> Mushroom is written in node, you run it as a .js file through the node interpreter
+ * 'mushroom.js' -> the .js file which interprets the commands and fires the appropriate functionality
+ * 'command' -> the command you want to run
  
  The commands are as follows: 
  
- ###compile 
+ **compile**
  
  Compiles and links contracts contained with in one or many .sol files
  
@@ -211,7 +210,7 @@ You should see the standard project structure inside the directory
  
  1) Looks up the files to compile in contract.config (1)
  
-  ```json
+  ```
   module.exports = {
       
       files_to_compile: ["example_child.sol","example_grandchild.sol" ],    <----- 1
@@ -239,7 +238,7 @@ You should see the standard project structure inside the directory
   * formal verification output (not sure about this bit)
  
  
- ###deploy
+ **deploy**
  
  Deploys compiled contracts to Ethereum
  
@@ -249,7 +248,7 @@ You should see the standard project structure inside the directory
  
  1) Looks up the name of the file containing the contracts to deploy in contract.config (3)
  
-  ```json
+  ```
   module.exports = {
       
       files_to_compile: ["example_child.sol","example_grandchild.sol" ],    
@@ -271,7 +270,7 @@ You should see the standard project structure inside the directory
  5) Switches mining off if it wasn't on previously
  
  6) Writes out the details of the deployed contracts to a json file (5)  
- ```json
+ ```
  {"contracts":
   [{"name":"Base_contract",
     "details":{
@@ -288,7 +287,7 @@ You should see the standard project structure inside the directory
  
  Note, this file gets completely overwritten with each deploy
  
- ###helpers
+ **helpers**
  
  Generates helper files which provide a contract abstraction for easy interaction with each deployed contract
  
@@ -306,7 +305,7 @@ You should see the standard project structure inside the directory
   
   To include helper in your project:
   
-  ```javascript
+  ```
   var helper_file = '/your/path/to/file/Your_contract_helper.js'
   var Your_contract = require(helper_file)
   ```
@@ -326,7 +325,7 @@ You should see the standard project structure inside the directory
   2) Wraps interactions to the contract in a Promise.
   
   These promises can be chained together to form what behaves like a chain of synchronous functions, for example:
- ```javascript
+ ```
  toggle_mining_on()
      .then(unlock_acc)                      <----- other functions you might write
      .then(set_args_call)
@@ -401,14 +400,14 @@ You should see the standard project structure inside the directory
 
 For calls the format is  *********** check this is true, can calls receive input variables ***********
 
-```javascript
+```
 your_contract.constant_function([<.sol function arg 1>,...., <.sol function arg n>, {transaction object}])
 
 ```
  
  For transactions the format is  
  
- ```javascript
+ ```
  your_contract.non-constant_function([<.sol function arg 1>,...., <.sol function arg n>, {transaction object}])
  
  ```
