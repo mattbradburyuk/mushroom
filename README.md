@@ -68,7 +68,7 @@ Here's the steps for installing Mushroom
  $ cd mushroom
  ```
  4) Take a look in the mushroom folder, there is: 
- * A directory called 'mushroom_template_files': This is basically a template for each new Mushroom project. Don't change the files in here unless you wat the changes to be replicated across all future projects 
+ * A directory called 'mushroom_template_files': This is basically a template for each new Mushroom project. Don't change the files in here unless you want the changes to be replicated across all future projects 
  * A script called 'mushroom_init.sh': This is the script you will use to start a new mushroom project
  
 ##Starting a new Mushroom project 
@@ -100,7 +100,7 @@ The script will copy over a clean version of a mushroom project from the templat
  ``` 
  You should see the standard project structure inside the directory (see next section)
 
- 4) Open .mushroom_config.js (its currently a hidden file so you have to use 'ls -a' to see it, probably need to change that)
+ 4) Open .mushroom_config.js (its currently a hidden file so you have to use 'ls -a' to see it, bug raised to change that)
  
  
   ```
@@ -118,11 +118,11 @@ The script will copy over a clean version of a mushroom project from the templat
 ##Mushroom project directory structure
  A Mushroom project has the following directories and files
  
- **sources**
+**sources**
  
  This is where you put your solidity .sol files which you want to compile
  
- **output**
+**output**
  
  All generated output from mushroom is written to one of the folders in the 'output' directory:
  
@@ -130,9 +130,9 @@ The script will copy over a clean version of a mushroom project from the templat
  * /deployed: holds a file containing information about deployed contracts (address and tx_receipt for deployment tranasction)
  * /helpers: holds the files which provide contract abstractions for each deployed contract
  
- **config**
+**config**
  
- Contains contract_config.js, this is a json file which allows the you to specify what should be compiled, deployed and what the output files should be called.
+Contains contract_config.js, this is a json file which allows the you to specify what should be compiled, deployed and what the output files should be called.
  
  ```
  module.exports = {
@@ -147,18 +147,18 @@ The script will copy over a clean version of a mushroom project from the templat
  ```
 
  
- **.mushroom**
+**.mushroom**
  
- This is the functionality of Mushroom, take a look if you want to understand whats under the hood.
+This is the functionality of Mushroom, take a look if you want to understand whats under the hood.
  
  
- **mushroom.js**
+**mushroom.js**
  
- This is the main .js file which the you run to invoke a given function (see Mushroom commands below)
+This is the main .js file which the you run to invoke a given function (see Mushroom commands below)
  
- **.mushroom_config.js**
+**.mushroom_config.js**
  
- This file holds the configuration information for mushroom
+This file holds the configuration information for mushroom
  
  ```
  module.exports = {
@@ -189,9 +189,9 @@ The script will copy over a clean version of a mushroom project from the templat
  
  
  
- **Mushroom commands**
+##Mushroom commands
  
- All commands should be run from the project root and take the form:
+All commands should be run from the project root and take the form:
  ```
  project_root $ node mushroom.js command
  ```
