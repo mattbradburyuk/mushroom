@@ -1,3 +1,9 @@
+Note: account Unlocking needs fixing, currently coinbase account is hardcoded to dummy password which will not match your coinbase password. To temporary fix go into the ./mushroom/deployers/multideploy.js file and change the password in the unlock_acc method (line 79).
+
+Don't put a password in for an account holding real ether, that would not be wise....
+
+I'll fix it properly soon
+
 # Mushroom
 My crack at making something a bit like Truffle...
 
@@ -100,9 +106,14 @@ The script will copy over a clean version of a mushroom project from the templat
  ``` 
  You should see the standard project structure inside the directory (see next section)
 
- 4) Open .mushroom_config.js (its currently a hidden file so you have to use 'ls -a' to see it, bug raised to change that)
+ 4) Change to the config directory, eg
+  
+ ```
+ new_project_name $ cd config
+ ```
  
  
+ 4) Open contract_config.js 
   ```
   module.exports = {
       rpc: {                           <----- this points to the geth client you want to interact with
@@ -132,18 +143,23 @@ The script will copy over a clean version of a mushroom project from the templat
  
 **config**
  
-Contains contract_config.js, this is a json file which allows the you to specify what should be compiled, deployed and what the output files should be called.
+Contains contract_config.js, this is a json file which allows the you to specify what should be compiled, deployed and what the output files should be called, together with the rpc conection to geth.
  
  ```
- module.exports = {
-     
-     files_to_compile: ["example_child.sol","example_grandchild.sol" ],
-     compiler_output_file: "compiled.json",
-     compiler_output_file_to_deploy: "compiled.json",
-     contracts_to_deploy: ["Base_contract","Child_contract"],
-     deployment_record: "deployed_instances.json"
-     
- };
+module.exports = {
+
+    rpc: {
+        host: "192.168.99.100",
+        port: 8541
+    },
+
+    files_to_compile: ["example_child.sol","example_grandchild.sol" ],
+    compiler_output_file: "compiled.json",
+    compiler_output_file_to_deploy: "compiled.json",
+    contracts_to_deploy: ["Base_contract","Child_contract"],
+    deployment_record: "deployed_instances.json"
+    
+};
  ```
 
  
@@ -158,14 +174,11 @@ This is the main .js file which the you run to invoke a given function (see Mush
  
 **.mushroom_config.js**
  
-This file holds the configuration for mushroom
+This file holds the structural configuration for mushroom
  
  ```
  module.exports = {
-     rpc: {                           <----- this points to the geth client you want to interact with
-         host: "192.168.99.100",
-         port: 8541
-     },
+
      structure: {                     <----- this tells Mushroom where to expect files to be in its structure
          source_directory: "/sources/",
          
@@ -218,6 +231,8 @@ The commands are as follows:
   ```
   module.exports = {
       
+      ...
+      
       files_to_compile: ["example_child.sol","example_grandchild.sol" ],    <----- 1
       compiler_output_file: "compiled.json",                                <----- 2
       compiler_output_file_to_deploy: "compiled.json",
@@ -255,6 +270,8 @@ The commands are as follows:
  
   ```
   module.exports = {
+      
+      ...
       
       files_to_compile: ["example_child.sol","example_grandchild.sol" ],    
       compiler_output_file: "compiled.json",                                
@@ -435,6 +452,6 @@ Also, to test out the heplers you can run:
 new_project $ node ./.mushroom/helper_generator/tester.js
 
 ```
-This will run a quick interaction test using the contract abstraction, which reads in a value, increments it by 1 then reads it again.
+This will run a quick interaction test using the contract abstraction, which reads in a value, increments it by 1 then reads it again. (note you wil have to go into the tester.js file and change the password for the coinbase account)
   
  

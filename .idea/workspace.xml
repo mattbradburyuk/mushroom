@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4033e58b-bd4a-47ca-b3c2-ba4525df6b59" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mushroom_init.sh" afterPath="$PROJECT_DIR$/mushroom_init.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js" afterPath="$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mushroom_template_files/mushroom.js" afterPath="$PROJECT_DIR$/mushroom_template_files/mushroom.js" />
     </list>
     <ignored path="mushroom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mushroom_init.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mushroom_init.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mushroom_init.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -37,8 +39,8 @@
       <file leaf-file-name="multi_compiler.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/compilers/multi_compiler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -48,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/mushroom_template_files/config/contract_config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -58,18 +60,48 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="615">
-                <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+              <first_editor relative-caret-position="105">
+                <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
                 <folding>
-                  <marker date="1475234864000" expanded="true" signature="10192:10604" ph="{...}" />
-                  <marker date="1475234864000" expanded="true" signature="10208:10603" ph="[...]" />
-                  <marker date="1475234864000" expanded="true" signature="10209:10402" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-                  <marker date="1475234864000" expanded="true" signature="10248:10397" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-                  <marker date="1475234864000" expanded="true" signature="10407:10600" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-                  <marker date="1475234864000" expanded="true" signature="10446:10595" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+                  <marker date="1475584543000" expanded="true" signature="10547:10959" ph="{...}" />
+                  <marker date="1475584543000" expanded="true" signature="10563:10958" ph="[...]" />
+                  <marker date="1475584543000" expanded="true" signature="10564:10757" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+                  <marker date="1475584543000" expanded="true" signature="10603:10752" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+                  <marker date="1475584543000" expanded="true" signature="10762:10955" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+                  <marker date="1475584543000" expanded="true" signature="10801:10950" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
                 </folding>
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mushroom.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mushroom_template_files/mushroom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tester.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multi_deploy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/deployers/multi_deploy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-435">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,11 +136,12 @@
         <option value="$PROJECT_DIR$/sources/example_grandchild.sol" />
         <option value="$PROJECT_DIR$/test_script" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/mushroom_template_files/package.json" />
         <option value="$PROJECT_DIR$/mushroom_template_files/.mushroom_config.js" />
         <option value="$PROJECT_DIR$/mushroom_init.sh" />
+        <option value="$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/mushroom_template_files/mushroom.js" />
       </list>
     </option>
   </component>
@@ -181,6 +214,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom_template_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom_template_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helper_generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom_template_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mushroom_template_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".mushroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -193,7 +306,7 @@
     <property name="configurable.Global.libraries.is.expanded" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cp_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_tester" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$USER_HOME$/node_modules/mocha" />
@@ -211,7 +324,14 @@
       <recent name="$PROJECT_DIR$/.mushroom" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.tester.js">
+    <configuration default="false" name="tester.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file=".mushroom/helper_generator/tester.js" working-dir="$PROJECT_DIR$/mushroom_template_files/">
+      <profiling v8-profiler-path="" />
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+        <profiling v8-profiler-path="" />
+      </EXTENSION>
+      <method />
+    </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -276,6 +396,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.tester.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.tester.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -296,24 +424,26 @@
       <workItem from="1475157958782" duration="19261000" />
       <workItem from="1475502363360" duration="171000" />
       <workItem from="1475504071337" duration="31000" />
-      <workItem from="1475570036067" duration="5357000" />
+      <workItem from="1475570036067" duration="8545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41743000" />
+    <option name="totallyTimeSpent" value="44931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-318" y="-1050" width="1811" height="1035" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16201118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45493108" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30965006" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -322,14 +452,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -371,18 +499,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js</url>
+          <line>11</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="23" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mushroom_init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -405,12 +534,12 @@
           <first_editor relative-caret-position="6180">
             <caret line="412" column="33" selection-start-line="412" selection-start-column="33" selection-end-line="412" selection-end-column="33" />
             <folding>
-              <marker date="1475234864000" expanded="true" signature="10192:10604" ph="{...}" />
-              <marker date="1475234864000" expanded="true" signature="10208:10603" ph="[...]" />
-              <marker date="1475234864000" expanded="true" signature="10209:10402" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10248:10397" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10407:10600" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10446:10595" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10547:10959" ph="{...}" />
+              <marker date="1475584543000" expanded="true" signature="10563:10958" ph="[...]" />
+              <marker date="1475584543000" expanded="true" signature="10564:10757" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10603:10752" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10762:10955" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10801:10950" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -474,12 +603,12 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1475234864000" expanded="true" signature="10192:10604" ph="{...}" />
-              <marker date="1475234864000" expanded="true" signature="10208:10603" ph="[...]" />
-              <marker date="1475234864000" expanded="true" signature="10209:10402" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10248:10397" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10407:10600" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10446:10595" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10547:10959" ph="{...}" />
+              <marker date="1475584543000" expanded="true" signature="10563:10958" ph="[...]" />
+              <marker date="1475584543000" expanded="true" signature="10564:10757" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10603:10752" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10762:10955" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10801:10950" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -631,13 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/to do.txt" />
-    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/deployers/multi_deploy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mushroom_template_files/sources/.ignore_me.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,14 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="23" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -691,22 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/compilers/multi_compiler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mushroom_template_files/config/contract_config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom_config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -715,28 +813,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mushroom_init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mushroom_template_files/config/contract_config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/compilers/multi_compiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/helper_generator/tester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mushroom_template_files/.mushroom/deployers/multi_deploy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="615">
-            <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+          <first_editor relative-caret-position="105">
+            <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             <folding>
-              <marker date="1475234864000" expanded="true" signature="10192:10604" ph="{...}" />
-              <marker date="1475234864000" expanded="true" signature="10208:10603" ph="[...]" />
-              <marker date="1475234864000" expanded="true" signature="10209:10402" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10248:10397" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10407:10600" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
-              <marker date="1475234864000" expanded="true" signature="10446:10595" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10547:10959" ph="{...}" />
+              <marker date="1475584543000" expanded="true" signature="10563:10958" ph="[...]" />
+              <marker date="1475584543000" expanded="true" signature="10564:10757" ph="{&quot;name&quot;: &quot;Base_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10603:10752" ph="{&quot;address&quot;: &quot;0x989b2117a78e344905f22ae4a285c3c5e412fa20&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10762:10955" ph="{&quot;name&quot;: &quot;Child_contract&quot;...}" />
+              <marker date="1475584543000" expanded="true" signature="10801:10950" ph="{&quot;address&quot;: &quot;0xdb9eb57ca186291dd51aa741ec5a4ae02b2f04fd&quot;...}" />
             </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mushroom_init.sh">
+    <entry file="file://$PROJECT_DIR$/mushroom_template_files/mushroom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding />
         </state>
       </provider>

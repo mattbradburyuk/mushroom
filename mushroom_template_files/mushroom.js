@@ -14,7 +14,7 @@ var mushroom_str =
     ' (________________)\n' +
     '        |   |    \n' +
     '        |   |    \n' +
-    '        |___|    a less good version of truffle :-) .... \n'
+    '        |___|    my crack at making something a bit like truffle :-) .... \n'
 
 console.log(mushroom_str);
 
