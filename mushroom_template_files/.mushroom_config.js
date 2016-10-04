@@ -1,8 +1,5 @@
 module.exports = {
-    rpc: {
-        host: "192.168.99.100",
-        port: 8541
-    },
+
     structure: {
         source_directory: "/sources/",
         

@@ -27,7 +27,7 @@ var contract_config = require(cc_path);
 // *********** set up web3 and rpc ****************
 
 const web3  = new Web3();
-var url = 'http://'+mushroom_config.rpc.host+':'+ mushroom_config.rpc.port;
+var url = 'http://'+contract_config.rpc.host+':'+ contract_config.rpc.port;
 web3.setProvider(new web3.providers.HttpProvider(url));
 var rpc_client = jayson.client.http(url);
 
@@ -101,7 +101,7 @@ function make_helper_for_contract(contract_name) {
     var header_str = fs.readFileSync(header_file).toString();
 
     // get host:ip from config and substitute
-    var host_ip = '\"http://' + mushroom_config.rpc.host + ":" + mushroom_config.rpc.port + '\"';
+    var host_ip = '\"http://' + contract_config.rpc.host + ":" + contract_config.rpc.port + '\"';
     header_str = header_str.replace(/sub_geth_host_port/g, host_ip);
 
 
