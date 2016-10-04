@@ -59,6 +59,13 @@ esac
 
 echo ' ---> Target directory: ' $TARGET_DIR
 
+# check if $TARGET_DIR exists already
+
+if [ -d "$TARGET_DIR" ]; then
+    echo ' ----> Directory already exists'
+    exit
+fi
+
 
 # Copy template files to new folder
 
@@ -66,7 +73,8 @@ echo ''
 echo 'Copying Mushroom template to new project folder...'
 
 mkdir $TARGET_DIR
-cp -R $SOURCE_DIR/ $TARGET_DIR
+cp -iR $SOURCE_DIR/.  $TARGET_DIR         #i: prompt for overwriting files, R: recursive
+
 echo " ---> Done"
 
 # Installing node dependencies with npm
