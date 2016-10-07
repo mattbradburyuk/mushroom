@@ -37,6 +37,7 @@ var helper_file = '../../output/helpers/Child_contract_helper.js'
 
 
 var myContract = require(helper_file)
+var Comprom = require('../../output/helpers/common_promises_helper.js')
 
 // test module level vars:
 // console.log("myContract.get_abi: ", myContract.get_abi())
@@ -67,7 +68,7 @@ var set_args_tx = function (val) {
 var switch_on_mining;
 
 toggle_mining_on()
-    .then(unlock_acc)
+    .then(Comprom.unlock_acc)
     .then(set_args_call)
     .then(myContract.get_child_value)
     .then(set_args_tx)
@@ -157,24 +158,7 @@ function toggle_mining_off(pass_through){
     });
 }
 
-// ********* unlock account *********
 
-function unlock_acc(pass_through){
-    console.log("\nunlock_acc called");
-    return new Promise(function (resolve,reject){
-
-        web3.personal.unlockAccount(web3.eth.accounts[0],'mattspass', callback);  // unlock accounts
-
-        function callback(e,r) {
-            if (e) {
-                reject("unlock_acc error");
-            } else {
-                console.log(" --->account unlocked");
-                resolve(pass_through);
-            }
-        }
-    });
-}
 
 // *********end of promise chain markers **********
 

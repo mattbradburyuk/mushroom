@@ -1,8 +1,3 @@
-Note: account Unlocking needs fixing, currently coinbase account is hardcoded to dummy password which will not match your coinbase password. To temporary fix go into the ./mushroom/deployers/multideploy.js file and change the password in the unlock_acc method (line 79).
-
-Don't put a password in for an account holding real ether, that would not be wise....
-
-I'll fix it properly soon
 
 # Mushroom
 My crack at making something a bit like Truffle...
@@ -13,7 +8,7 @@ Mushroom is a tool kit for working with Ethereum Solidity Smart contracts, it in
  * Contract deployer, which will push the compiled contracts onto an Ethereum blockchain
  * Contract helper generator, which generate a node.js contract specific abstraction for easy interaction with your contract
  
- Note: I wrote this on a mac, I haven't tested it on any other platforms yet
+ Note: I wrote this on a mac, I have also got it working on linux. Windows... you're welcome to give it a go, good luck.
  
  
 ## Reason for writing Mushroom (for context and as a caveat)
@@ -248,7 +243,7 @@ The commands are as follows:
  
  4) Writes the output to the file specified at (2) in the '/output/compiled' directory
  
- This output file contains lots of usfuls data about each of the compiled contracts and the compilation process including 
+ This output file contains lots of useful data about each of the compiled contracts and the compilation process including 
   * bytecode
   * function hashes
   * gas estimates
@@ -285,9 +280,7 @@ The commands are as follows:
  
  3) Switches on mining if not on already and unlocks the coinbase account 
  
- (****** currently this is set to my dummy password 'mattspass', this needs fixing so works with a non dummy password - bug raised *******)
- 
- 4) Deploys the contracts
+ 4) Deploys the contracts (applying the amount of gas in the gasEstimates from the compiler)
  
  5) Switches mining off if it wasn't on previously
  
@@ -413,14 +406,13 @@ The contract abstraction:
  * For non-constant functions a 'transaction' is used which requires gas to power the state change
  
 
-
 5) Waits until the transaction is mined.
  
 For non-constant functions the call to the function will only complete once the transaction has been mined
  
  6) Varies the number of arguments expected
 
-For calls the format is  *********** check this is true, can calls receive input variables ***********
+For calls the format is:
 
 ```
 your_contract.constant_function([<.sol function arg 1>,...., <.sol function arg n>, {transaction object}])
@@ -434,8 +426,20 @@ your_contract.constant_function([<.sol function arg 1>,...., <.sol function arg 
  
  ```
  
- Note, there is no callback required, this is handled in the promise wrapper
+ Note
+ * The string of arguments need to be wropped in an array, eg '[ arg1, arg2, {contract_obj} ]'
+ * If the .sol function doesn't take any arguments and you don;t want to provide details in the contract object, you still need to provide an array with a blank contract object in it, ie. '[{}]'
+ * There is no callback required, this is handled in the promise wrapper
  
+ 
+##Common promises
+
+when you run mushroom_init.sh , common_promises_helper.js is copied into output/helper directory. This gives a set of common functions wrapped in promises which can be used in user code, currently includes:
+
+ * unlock_acc: prompts for password before unlocking the coinbase account
+ * end_success/ end_error functions for the end of the promise chain to pick up success or failure
+ 
+ I'm planning to add more.
  
 ##Example .sol files
 
