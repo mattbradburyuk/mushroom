@@ -77,6 +77,11 @@ cp -iR $SOURCE_DIR/.  $TARGET_DIR         #i: prompt for overwriting files, R: r
 
 echo " ---> Done"
 
+# copy common_promises_helper.js to helpers file
+
+cp $TARGET_DIR/.mushroom/helper_generator/common_promises_helper.js $TARGET_DIR/output/helpers/
+
+
 # Installing node dependencies with npm
 
 echo ""

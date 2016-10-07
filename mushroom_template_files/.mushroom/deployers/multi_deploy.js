@@ -72,23 +72,61 @@ function read_in_json(){
     });
 }
 
-function unlock_acc(pass_through){
-    console.log("\nUnlocking coinbase account");
-    return new Promise(function (resolve,reject){
+// function unlock_acc(pass_through){
+//     console.log("\nUnlocking coinbase account");
+//     return new Promise(function (resolve,reject){
+//
+//         web3.personal.unlockAccount(web3.eth.accounts[0], 'mattspass', callback);  // unlock accounts
+//
+//         function callback(e,r) {
+//             if (e) {
+//                 reject("unlock_acc error");
+//             } else {
+//                 console.log(" ---> account unlocked");
+//                 resolve(pass_through);
+//             }
+//         }
+//     });
+// }
 
-        web3.personal.unlockAccount(web3.eth.accounts[0], 'mattspass', callback);  // unlock accounts
 
-        function callback(e,r) {
+function unlock_acc(pass_through)
+{
+    console.log("\nunlock_acc called");
+    return new Promise(function (resolve, reject) {
+
+        var prompt = require('prompt');
+
+        var schema = {
+            properties: {
+                password: {
+                    message: 'Please enter password for coinbase account',
+                    required: true,
+                    hidden: true
+                }
+            }
+        };
+
+        prompt.message = '';
+        prompt.start();
+
+        prompt.get(schema, function (err, result) {
+
+            console.log('Password input received...');
+
+            web3.personal.unlockAccount(web3.eth.accounts[0], result.password, callback);  // unlock accounts
+
+        });
+        function callback(e, r) {
             if (e) {
                 reject("unlock_acc error");
             } else {
-                console.log(" ---> account unlocked");
+                console.log(" --->account unlocked");
                 resolve(pass_through);
             }
         }
     });
 }
-
 
 function deploy_contracts(json){
 
@@ -159,6 +197,11 @@ function deploy_contract(contract_json){
         // console.log("bytecode: ", bc);
 
         var contract_obj = web3.eth.contract(iface);
+
+        var gas = contract_json.gasEstimates.creation[0]+contract_json.gasEstimates.creation[1];
+        console.log(" ---> Gas provided to deploy: ", gas);
+
+
 
         contract_obj.new(
             {

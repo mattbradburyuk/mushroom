@@ -4,26 +4,28 @@ var jsonfile = require("jsonfile");
 var Web3 = require('web3');
 var jayson = require('jayson');
 
-
 // ********* get the config files  ************
 
 // note, as mushroom.js is in the root of the project the cwd() will always return the root so can use it to get to the .mushroom_config.js compiled_file
 
 var root = process.cwd();
 
-var mc_path = root + "/.mushroom_config.js"
+var mc_path = root + "/.mushroom_config.js";
 var mushroom_config = require(mc_path);
 
 var cc_path = root + mushroom_config.structure.contract_config_location + mushroom_config.structure.contract_config;
-var contract_config = require(cc_path)
+var contract_config = require(cc_path);
 
 
-// ************ set up web3 and RPC client ***************
+
+// *********** set up web3 and rpc ****************
 
 const web3  = new Web3();
 var url = 'http://'+contract_config.rpc.host+':'+ contract_config.rpc.port;
 web3.setProvider(new web3.providers.HttpProvider(url));
 var rpc_client = jayson.client.http(url);
+
+
 
 
 // ************ import helpers to test ******************

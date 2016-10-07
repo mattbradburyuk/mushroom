@@ -8,6 +8,8 @@ var solc = require('solc');
 var jsonfile = require("jsonfile");
 
 
+console.log("solc version: ",solc.version(),"\n");
+
 // ********* get the config files  ************
 
 // note, as mushroom.js is in the root of the project the cwd() will always return the root so can use it to get to the .mushroom_config.js compiled_file

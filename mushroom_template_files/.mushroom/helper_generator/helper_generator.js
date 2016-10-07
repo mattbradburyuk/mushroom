@@ -67,8 +67,11 @@ console.log(" ---> ",deployed_contracts_names )
 
 
 for (var i in compiled_contracts_names) {
-    if (i in deployed_contracts_names){
-        make_helper_for_contract(compiled_contracts_names[i])
+
+    for (var j in deployed_contracts_names) {
+        if (compiled_contracts_names[i] == deployed_contracts_names[j]) {
+            make_helper_for_contract(compiled_contracts_names[i])
+        }
     }
 }
 
