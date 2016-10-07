@@ -1,9 +1,9 @@
 #Release notes
 
 
-## v0.0.3
+# v0.0.3
 
-Functionality
+##Functionality
 
 **common_promises_helper**
 
@@ -22,12 +22,12 @@ The configuration for the rpc connection to a geth client has moved from the  hi
 Now works on linux
 
 
-Bug fixes:
+##Bug fixes:
 
 * 21: helpers generator is trying to create a helper for a non deployed contract 
 * 16: Fix dummy password
 * 22: mushroom_init.sh doesnt' copy template files to the correct folder when using linux
 
-Other 
+##Other 
 
 * tester.js now detects rpc ip:port so anybody can run the tester.js file.
